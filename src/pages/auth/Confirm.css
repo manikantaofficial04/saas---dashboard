@@ -1,0 +1,175 @@
+.confirm-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #e7e7e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.confirm-card {
+  width: 100%;
+  max-width: 430px;
+  min-height: 430px;
+  background: #ffffff;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 45px 25px;
+}
+
+/* Illustration */
+
+.confirm-illustration {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.confirm-circle {
+  width: 110px;
+  height: 110px;
+  background: #f5f4ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Confetti */
+
+.confetti {
+  position: absolute;
+  width: 13px;
+  height: 3px;
+  border-radius: 5px;
+}
+
+.confetti-1 {
+  background: #ff9a65;
+  top: 12px;
+  left: 15px;
+  transform: rotate(35deg);
+}
+
+.confetti-2 {
+  background: #ff52e5;
+  top: 28px;
+  left: 2px;
+  transform: rotate(-45deg);
+}
+
+.confetti-3 {
+  background: #625bff;
+  top: 5px;
+  left: 62px;
+  transform: rotate(90deg);
+}
+
+.confetti-4 {
+  background: #ff9a65;
+  top: 18px;
+  right: 8px;
+  transform: rotate(-35deg);
+}
+
+.confetti-5 {
+  background: #ff52e5;
+  top: 36px;
+  right: 0;
+  transform: rotate(35deg);
+}
+
+.confetti-6 {
+  background: #625bff;
+  top: 0;
+  right: 35px;
+  transform: rotate(-55deg);
+}
+
+.confetti-dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.dot-1 {
+  background: #ff52e5;
+  top: 35px;
+  left: 20px;
+}
+
+.dot-2 {
+  background: #ff9a65;
+  top: 5px;
+  left: 85px;
+}
+
+.dot-3 {
+  background: #625bff;
+  top: 48px;
+  right: 5px;
+}
+
+.dot-4 {
+  background: #ff52e5;
+  top: 0;
+  left: 45px;
+}
+
+/* Message */
+
+.confirm-message {
+  color: #111126;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+/* Button */
+
+.confirm-home-button {
+  width: 100px;
+  height: 39px;
+  background: #625bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 10px;
+  transition: background 0.2s ease;
+}
+
+.confirm-home-button:hover {
+  background: #5149e8;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  .confirm-card {
+    min-height: 380px;
+    padding: 30px 20px;
+  }
+
+  .confirm-message {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,122 @@
+.recover-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #e7e7e7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.recover-card {
+  width: 100%;
+  max-width: 390px;
+  min-height: 390px;
+  padding: 60px 45px;
+  background: #ffffff;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.recover-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.recover-logo-circle {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #625bff;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recover-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111126;
+  margin: 0 0 38px;
+}
+
+.recover-form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.recover-form-group label {
+  display: block;
+  font-size: 10px;
+  color: #292941;
+  margin-bottom: 8px;
+}
+
+.recover-form-group input {
+  width: 100%;
+  height: 39px;
+  padding: 0 11px;
+  box-sizing: border-box;
+  background: #f5f5f7;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  font-size: 10px;
+  color: #33334a;
+}
+
+.recover-form-group input::placeholder {
+  color: #9292a3;
+}
+
+.recover-button {
+  width: 100%;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #625bff;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.recover-button:hover {
+  background: #5149e8;
+}
+
+.recover-error {
+  color: #e04444;
+  font-size: 10px;
+  margin: 0 0 12px;
+}
+
+.recover-success {
+  text-align: center;
+}
+
+.recover-success p {
+  color: #55556a;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 480px) {
+  .recover-card {
+    padding: 45px 25px;
+    min-height: 350px;
+  }
+}

@@ -1,0 +1,44 @@
+/* Main Layout */
+
+.dashboard-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #f7f8fc;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 90px;
+  min-width: 90px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  flex-shrink: 0;
+}
+
+/* Main Content Area */
+
+.dashboard-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+
+.dashboard-main > header {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* Dashboard Page */
+
+.dashboard-page {
+  width: 100%;
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+}

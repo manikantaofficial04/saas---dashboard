@@ -1,0 +1,90 @@
+/* MAIN DASHBOARD */
+
+.dashboard-content {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #f7f8fc;
+}
+
+/* STATISTICS CARDS */
+
+.dashboard-stats {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* REPORTS AND ANALYTICS */
+
+.dashboard-charts {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+  align-items: stretch;
+}
+
+.dashboard-reports,
+.dashboard-analytics {
+  min-width: 0;
+  width: 100%;
+}
+
+/* RECENT ORDERS AND TOP SELLING */
+
+.dashboard-bottom {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 15px;
+  align-items: start;
+}
+
+.dashboard-orders,
+.dashboard-products {
+  min-width: 0;
+  width: 100%;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .dashboard-content {
+    padding: 16px;
+  }
+
+  .dashboard-charts,
+  .dashboard-bottom {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 12px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 12px;
+  }
+
+  .dashboard-charts,
+  .dashboard-bottom {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+  .dashboard-content {
+    padding: 9px;
+  }
+
+  .dashboard-charts,
+  .dashboard-bottom {
+    margin-bottom: 12px;
+  }
+}

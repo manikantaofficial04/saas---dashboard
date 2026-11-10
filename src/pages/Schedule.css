@@ -1,0 +1,1208 @@
+/* =========================================
+   SCHEDULE PAGE - GLOBAL
+========================================= */
+
+.schedule-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 25px;
+  background: #f7f7fa;
+  color: #17152d;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.schedule-page * {
+  box-sizing: border-box;
+}
+
+.schedule-page button,
+.schedule-page input,
+.schedule-page select {
+  font-family: inherit;
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.schedule-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.schedule-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.schedule-header p {
+  margin: 6px 0 0;
+  color: #9292a4;
+  font-size: 12px;
+}
+
+.schedule-add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 17px;
+  border: none;
+  border-radius: 8px;
+  background: #625bff;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.schedule-add-btn:hover,
+.create-schedule-btn:hover {
+  background: #5149e8;
+}
+
+/* =========================================
+   TOP TABS
+========================================= */
+
+.schedule-tabs {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  margin-bottom: 20px;
+  padding: 4px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.schedule-tabs button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 17px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #77758b;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.schedule-tabs button:hover {
+  background: #f2f1ff;
+  color: #625bff;
+}
+
+.schedule-tabs button.active {
+  background: #625bff;
+  color: #ffffff;
+}
+
+/* =========================================
+   SCHEDULE LIST LAYOUT
+========================================= */
+
+.schedule-layout {
+  display: grid;
+  grid-template-columns: 225px minmax(0, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* =========================================
+   LEFT SIDEBAR
+========================================= */
+
+.schedule-sidebar {
+  min-height: 670px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.create-schedule-btn {
+  width: 100%;
+  min-height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: none;
+  border-radius: 7px;
+  background: #625bff;
+  color: #ffffff;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* =========================================
+   MINI CALENDAR
+========================================= */
+
+.mini-calendar {
+  margin-top: 16px;
+  padding: 12px 10px;
+  border: 1px solid #f0f0f4;
+  border-radius: 7px;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #45445d;
+  font-size: 11px;
+}
+
+.calendar-header div {
+  display: flex;
+  gap: 4px;
+}
+
+.calendar-header button {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #a8a8b6;
+  cursor: pointer;
+}
+
+.calendar-header button:hover {
+  color: #625bff;
+}
+
+.calendar-weekdays,
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.calendar-weekdays {
+  margin-bottom: 8px;
+}
+
+.calendar-weekdays span {
+  color: #626179;
+  font-size: 10px;
+}
+
+.calendar-days {
+  row-gap: 5px;
+}
+
+.calendar-day {
+  width: 22px;
+  height: 22px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #54536d;
+  font-size: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.calendar-day:hover:not(:disabled) {
+  background: #eeedff;
+  color: #625bff;
+}
+
+.calendar-day.selected-day {
+  background: #625bff;
+  color: #ffffff;
+  box-shadow: 0 3px 8px rgba(98, 91, 255, 0.25);
+}
+
+.calendar-day.outside-month {
+  color: #b8b8c4;
+  cursor: default;
+}
+
+/* =========================================
+   PEOPLE SECTION
+========================================= */
+
+.schedule-people {
+  margin-top: 25px;
+}
+
+.schedule-people h3 {
+  margin: 0 0 15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.people-search {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 11px;
+  background: #f8f8fa;
+  border-radius: 6px;
+  color: #aaaab8;
+}
+
+.people-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #45445d;
+  font-size: 10px;
+}
+
+.people-search input::placeholder {
+  color: #88889b;
+}
+
+.people-list {
+  margin-top: 10px;
+}
+
+.person-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 5px;
+  border-bottom: 1px solid #f0f0f3;
+}
+
+.person-item img {
+  width: 29px;
+  height: 29px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.person-item h4 {
+  margin: 0 0 4px;
+  color: #28263f;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.person-item p {
+  margin: 0;
+  color: #9999aa;
+  font-size: 8px;
+  word-break: break-word;
+}
+
+.no-people {
+  color: #9999aa;
+  font-size: 11px;
+}
+
+/* MY SCHEDULE */
+
+.my-schedule-btn {
+  width: 100%;
+  min-height: 38px;
+  margin-top: auto;
+  border: 1px solid #e9e7ff;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #625bff;
+  font-size: 11px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.my-schedule-btn:hover {
+  background: #f5f4ff;
+}
+
+/* =========================================
+   SCHEDULE TABLE HEADER
+========================================= */
+
+.schedule-content {
+  min-width: 0;
+}
+
+.schedule-table-header {
+  min-height: 48px;
+  display: grid;
+  grid-template-columns: 42px 1.15fr 1fr 1.15fr 100px;
+  align-items: center;
+  padding: 0 15px;
+  color: #77758b;
+  font-size: 10px;
+}
+
+.schedule-table-header small {
+  margin-left: 5px;
+  font-size: 8px;
+}
+
+.schedule-select-all {
+  display: flex;
+  align-items: center;
+}
+
+.schedule-table-header input,
+.schedule-checkbox input {
+  width: 16px;
+  height: 16px;
+  accent-color: #625bff;
+  cursor: pointer;
+}
+
+/* =========================================
+   SCHEDULE ROWS
+========================================= */
+
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.schedule-row {
+  min-height: 56px;
+  display: grid;
+  grid-template-columns: 42px 1.15fr 1fr 1.15fr 100px;
+  align-items: center;
+  padding: 8px 15px;
+  background: #ffffff;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+.schedule-row:hover {
+  box-shadow: 0 4px 15px rgba(40, 35, 80, 0.05);
+}
+
+.schedule-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.schedule-date,
+.schedule-time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #22213a;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.schedule-date svg {
+  color: #3986ff;
+}
+
+.schedule-time svg {
+  color: #77758b;
+}
+
+/* =========================================
+   LOCATION BADGE
+========================================= */
+
+.schedule-location {
+  display: flex;
+  align-items: center;
+}
+
+.location-badge {
+  min-width: 135px;
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 9px;
+  padding: 0 13px;
+  border-radius: 25px;
+  background: #f0efff;
+  color: #625bff;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.location-badge svg {
+  fill: #625bff;
+  color: #625bff;
+}
+
+/* =========================================
+   SCHEDULE ACTIONS
+========================================= */
+
+.schedule-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.schedule-edit-btn,
+.schedule-delete-btn {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.schedule-edit-btn {
+  background: #fff9e9;
+  color: #ffbf43;
+}
+
+.schedule-edit-btn:hover {
+  background: #ffedc4;
+}
+
+.schedule-delete-btn {
+  background: #fff0f1;
+  color: #e63946;
+}
+
+.schedule-delete-btn:hover {
+  background: #ffdcdf;
+}
+
+.schedule-empty {
+  padding: 40px 15px;
+  text-align: center;
+  color: #9295a5;
+  background: #ffffff;
+  border-radius: 9px;
+  font-size: 13px;
+}
+
+/* =========================================
+   TASK BOARD TOOLBAR
+========================================= */
+
+.task-board-page {
+  width: 100%;
+  min-width: 0;
+}
+
+.task-board-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.task-view-switch {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.task-view-switch button {
+  min-width: 65px;
+  height: 36px;
+  padding: 0 14px;
+  border: none;
+  background: #ffffff;
+  color: #656579;
+  font-size: 11px;
+}
+
+.task-view-switch button.selected {
+  color: #625bff;
+  cursor: pointer;
+}
+
+.task-view-switch button.selected-board {
+  background: #625bff;
+  color: #ffffff;
+}
+
+.task-view-switch button:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+.task-board-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-search {
+  width: 190px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 11px;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #9292a4;
+}
+
+.task-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #33334a;
+  font-size: 11px;
+}
+
+.task-search input::placeholder {
+  color: #9999aa;
+}
+
+.task-filter {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 10px;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #77758b;
+}
+
+.task-filter select {
+  max-width: 115px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #55546a;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+/* =========================================
+   TASK BOARD GRID
+========================================= */
+
+.task-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  align-items: start;
+}
+
+.task-column {
+  min-width: 0;
+}
+
+.task-column-header {
+  min-height: 37px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 12px;
+}
+
+.task-column-header h3 {
+  margin: 0;
+  color: #4d4b68;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.task-column-header > span {
+  min-width: 19px;
+  height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eae9f3;
+  color: #77758b;
+  font-size: 9px;
+}
+
+.task-column-header button {
+  width: 25px;
+  height: 25px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #9998aa;
+  cursor: pointer;
+}
+
+.task-column-header button:hover {
+  background: #eeedff;
+  color: #625bff;
+}
+
+.task-column-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 120px;
+}
+
+/* =========================================
+   TASK CARD
+========================================= */
+
+.task-card {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #f0eff5;
+  border-radius: 9px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(30, 25, 70, 0.025);
+  transition: 0.2s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(30, 25, 70, 0.07);
+}
+
+.task-card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  margin-bottom: 13px;
+}
+
+.task-check {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #a4a4b5;
+  cursor: pointer;
+}
+
+.task-check.checked {
+  color: #625bff;
+}
+
+.task-card-top h4 {
+  min-width: 0;
+  flex: 1;
+  margin: 0;
+  overflow: hidden;
+  color: #28263f;
+  font-size: 11px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.task-menu {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.task-menu button {
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  color: #aaa9b9;
+  cursor: pointer;
+}
+
+.task-menu button:hover {
+  background: #f0efff;
+  color: #625bff;
+}
+
+/* =========================================
+   TASK PRIORITY TAGS
+========================================= */
+
+.task-tags {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 13px;
+}
+
+.priority-tag,
+.progress-tag {
+  min-width: 54px;
+  min-height: 23px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.priority-tag.low {
+  background: #ff6477;
+  color: #ffffff;
+}
+
+.priority-tag.medium {
+  background: #ff8b70;
+  color: #ffffff;
+}
+
+.priority-tag.high {
+  background: #25c0dc;
+  color: #ffffff;
+}
+
+.progress-tag {
+  min-width: 70px;
+  background: #ffd36a;
+  color: #55421c;
+}
+
+.progress-tag.at-risk {
+  background: #e51c35;
+  color: #ffffff;
+}
+
+/* =========================================
+   TASK DESCRIPTION
+========================================= */
+
+.task-description {
+  min-height: 30px;
+  margin: 0 0 12px;
+  color: #777687;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   TASK PREVIEW IMAGES
+========================================= */
+
+.task-previews {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.task-preview-image {
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.task-preview-image.design {
+  background: linear-gradient(135deg, #dceeff, #b9d7f3);
+  color: #507dbb;
+}
+
+.task-preview-image.illustration {
+  background: linear-gradient(135deg, #ffe2bb, #f9b34f);
+  color: #bd741e;
+}
+
+/* =========================================
+   TASK CARD FOOTER
+========================================= */
+
+.task-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 13px;
+}
+
+.task-members {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.task-members img {
+  width: 23px;
+  height: 23px;
+  margin-left: -5px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.task-members img:first-child {
+  margin-left: 0;
+}
+
+.add-member-btn {
+  width: 22px;
+  height: 22px;
+  margin-left: -2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: #20bedb;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.task-social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #aaa9b9;
+  font-size: 8px;
+}
+
+.task-social span {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+}
+
+/* =========================================
+   MOVE TASK SELECT
+========================================= */
+
+.task-card-move {
+  margin-top: 10px;
+}
+
+.task-card-move select {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #efedf5;
+  border-radius: 5px;
+  outline: none;
+  background: #faf9fd;
+  color: #77758b;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.empty-task-column {
+  padding: 25px 10px;
+  border: 1px dashed #dedce9;
+  border-radius: 8px;
+  color: #aaa9b9;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* =========================================
+   MODAL OVERLAY
+========================================= */
+
+.schedule-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(20, 20, 40, 0.45);
+  backdrop-filter: blur(3px);
+}
+
+.schedule-modal {
+  width: 100%;
+  max-width: 420px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 25px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+.schedule-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.schedule-modal-header h3 {
+  margin: 0;
+  color: #25243a;
+  font-size: 18px;
+}
+
+.schedule-modal-header button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  background: #f4f4f8;
+  color: #65677a;
+  cursor: pointer;
+}
+
+.schedule-modal-header button:hover {
+  background: #eae9f3;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.schedule-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.schedule-form-group label {
+  color: #44465a;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.schedule-form-group input,
+.schedule-form-group select {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #e6e7ed;
+  border-radius: 6px;
+  outline: none;
+  background: #ffffff;
+  color: #25243a;
+  font-size: 13px;
+}
+
+.schedule-form-group input:focus,
+.schedule-form-group select:focus {
+  border-color: #625bff;
+  box-shadow: 0 0 0 3px rgba(98, 91, 255, 0.08);
+}
+
+/* =========================================
+   MODAL BUTTONS
+========================================= */
+
+.schedule-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.schedule-cancel-btn,
+.schedule-save-btn {
+  min-width: 100px;
+  height: 39px;
+  padding: 0 13px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.schedule-cancel-btn {
+  background: #f1f1f5;
+  color: #55566a;
+}
+
+.schedule-cancel-btn:hover {
+  background: #e6e6ed;
+}
+
+.schedule-save-btn {
+  background: #625bff;
+  color: #ffffff;
+}
+
+.schedule-save-btn:hover {
+  background: #5149e8;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .schedule-layout {
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .schedule-sidebar {
+    padding: 17px;
+  }
+
+  .schedule-table-header,
+  .schedule-row {
+    grid-template-columns: 30px 1fr 0.9fr 1fr 85px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .location-badge {
+    min-width: 115px;
+    padding: 0 9px;
+  }
+
+  .schedule-actions {
+    gap: 7px;
+  }
+
+  .task-board {
+    gap: 10px;
+  }
+
+  .task-card {
+    padding: 11px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .schedule-page {
+    padding: 15px;
+  }
+
+  .schedule-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-sidebar {
+    min-height: auto;
+  }
+
+  .my-schedule-btn {
+    margin-top: 20px;
+  }
+
+  .schedule-content {
+    overflow-x: auto;
+  }
+
+  .schedule-table-header,
+  .schedule-row {
+    min-width: 650px;
+  }
+
+  .task-board-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .task-board-actions {
+    width: 100%;
+  }
+
+  .task-search {
+    flex: 1;
+  }
+
+  .task-board {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    overflow-x: auto;
+  }
+
+  .task-column {
+    min-width: 220px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .schedule-page {
+    padding: 12px;
+  }
+
+  .schedule-header h2 {
+    font-size: 19px;
+  }
+
+  .schedule-header p {
+    font-size: 10px;
+  }
+
+  .schedule-add-btn {
+    padding: 8px 11px;
+    font-size: 11px;
+  }
+
+  .schedule-sidebar {
+    padding: 17px;
+  }
+
+  .schedule-tabs {
+    width: 100%;
+  }
+
+  .schedule-tabs button {
+    flex: 1;
+    padding: 9px 7px;
+    font-size: 10px;
+  }
+
+  .task-board-actions {
+    flex-wrap: wrap;
+  }
+
+  .task-filter {
+    flex: 1;
+  }
+
+  .task-modal,
+  .schedule-modal {
+    padding: 18px;
+  }
+}

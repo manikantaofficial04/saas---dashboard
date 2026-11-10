@@ -1,0 +1,292 @@
+.auth-signup-page {
+  min-height: 100vh;
+  background: #e7e7e7;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.auth-signup-card {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 32% 68%;
+  background: white;
+  overflow: hidden;
+}
+
+.auth-signup-form-panel {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 35px;
+}
+
+.auth-signup-content {
+  width: 100%;
+  max-width: 250px;
+}
+
+.auth-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 23px;
+}
+
+.auth-logo-circle {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #625bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-signup-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111126;
+  margin: 0 0 30px;
+}
+
+.auth-social-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.auth-social-buttons button {
+  height: 36px;
+  border: none;
+  border-radius: 7px;
+  background: #f5f5f7;
+  color: #33334a;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.google-icon {
+  color: #4285f4;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.facebook-icon {
+  color: #4267a9;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 17px 0 22px;
+}
+
+.auth-divider span {
+  height: 1px;
+  background: #eeeeef;
+  flex: 1;
+}
+
+.auth-divider p {
+  font-size: 10px;
+  color: #33334a;
+  margin: 0;
+}
+
+.auth-form-group {
+  margin-bottom: 13px;
+}
+
+.auth-form-group label {
+  display: block;
+  font-size: 10px;
+  color: #292941;
+  margin-bottom: 7px;
+}
+
+.auth-input-wrapper {
+  width: 100%;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  background: #f5f5f7;
+  border-radius: 7px;
+  padding: 0 11px;
+  box-sizing: border-box;
+}
+
+.auth-input-wrapper input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #33334a;
+  font-size: 10px;
+}
+
+.auth-input-wrapper input::placeholder {
+  color: #9292a3;
+}
+
+.auth-password-toggle {
+  background: transparent;
+  border: none;
+  color: #858599;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.auth-signup-terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin: 17px 0;
+  font-size: 9px;
+  line-height: 1.6;
+  color: #33334a;
+}
+
+.auth-signup-terms input {
+  margin-top: 2px;
+  accent-color: #625bff;
+}
+
+.auth-signup-terms a {
+  color: #625bff;
+  text-decoration: underline;
+}
+
+.auth-error {
+  color: #e04444;
+  font-size: 10px;
+  margin: 0 0 10px;
+}
+
+.auth-submit-button {
+  width: 100%;
+  height: 39px;
+  border: none;
+  border-radius: 7px;
+  background: #625bff;
+  color: white;
+  font-size: 11px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.auth-submit-button:hover {
+  background: #5149e8;
+}
+
+.auth-signup-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #33334a;
+  font-size: 10px;
+}
+
+.auth-signup-text a {
+  color: #625bff;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+/* Illustration */
+
+.auth-signup-illustration {
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px;
+  min-width: 0;
+}
+
+.auth-signup-svg {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .auth-signup-card {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-signup-form-panel {
+    min-height: 100vh;
+    padding: 30px 25px;
+  }
+
+  .auth-signup-content {
+    max-width: 330px;
+  }
+
+  .auth-signup-illustration {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .auth-signup-form-panel {
+    padding: 25px 20px;
+  }
+}
+.auth-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.auth-logo-circle {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.auth-logo-circle svg {
+  display: block;
+  width: 55px;
+  height: 55px;
+}
+.auth-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.auth-logo-circle {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-logo-circle svg {
+  width: 55px;
+  height: 55px;
+  display: block;
+}
